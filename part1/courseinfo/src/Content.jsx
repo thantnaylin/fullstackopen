@@ -1,9 +1,8 @@
 import Part from "./Part";
 
-const Content = ({ courseDetails }) => {
-    const parts = courseDetails.map((item, index) => <Part part={item.part} exercise={item.exercise} key={index}/>);
+const Content = ({ parts }) => {
 
-    return parts;
+    return parts.map((item, index) => <Part name={item.name} exercises={item.exercises} key={index}/>);
 }
 
 export default Content;
